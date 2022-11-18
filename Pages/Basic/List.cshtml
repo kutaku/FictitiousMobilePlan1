@@ -1,0 +1,35 @@
+﻿@page
+@model FictitiousMobilePlan1.Pages.Basic.ListModel
+@{
+	ViewData["Title"] = "モデルの基本";
+}
+<h2>List</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>プラン名</th>
+			<th>毎月の支払額</th>
+			<th>姓</th>
+			<th>名</th>
+			<th>電話番号</th>
+			<th>住所</th>
+			<th>契約開始日</th>
+			<th>備考</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model.Phone)
+		{
+			<tr>
+				<td>@item.PlanName</td>
+				<td>@item.Payment</td>
+				<td>@item.Sei</td>
+				<td>@item.Mei</td>
+				<td>@item.Tel</td>
+				<td>@item.Address</td>
+				<td>@item.Starttime</td>
+				<td>@item.Remarks</td>
+			</tr>
+		}
+	</tbody>
+</table>

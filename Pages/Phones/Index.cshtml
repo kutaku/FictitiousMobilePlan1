@@ -1,0 +1,78 @@
+﻿@page
+@model FictitiousMobilePlan1.Pages.Phones.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">新規作成</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone[0].PlanName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone[0].Payment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone[0].Sei)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone[0].Mei)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone[0].Tel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone[0].Starttime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone[0].Remarks)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Phone) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlanName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Payment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sei)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mei)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Starttime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">編集</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id" asp-page-handler="Log" >閲覧</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">消去</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
