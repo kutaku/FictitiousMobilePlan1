@@ -36,8 +36,8 @@ namespace FictitiousMobilePlan1.Migrations
                     b.Property<string>("Mei")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Payment")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Payment")
+                        .HasColumnType("int");
 
                     b.Property<string>("PlanName")
                         .HasColumnType("nvarchar(max)");

@@ -18,7 +18,7 @@ namespace FictitiousMobilePlan1.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PlanName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Payment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Payment = table.Column<int>(type: "int", nullable: false),
                     Sei = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Mei = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Tel = table.Column<string>(type: "nvarchar(max)", nullable: true),

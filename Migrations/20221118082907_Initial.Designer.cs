@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FictitiousMobilePlan1.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20221117082425_Initial")]
+    [Migration("20221118082907_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -39,8 +39,8 @@ namespace FictitiousMobilePlan1.Migrations
                     b.Property<string>("Mei")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Payment")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Payment")
+                        .HasColumnType("int");
 
                     b.Property<string>("PlanName")
                         .HasColumnType("nvarchar(max)");
